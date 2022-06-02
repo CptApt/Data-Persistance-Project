@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.24647519, g: 0.28234503, b: 0.34570286, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -410,7 +410,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -60}
+  m_AnchoredPosition: {x: -250.92, y: -60}
   m_SizeDelta: {x: 600, y: 60}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &188020406
@@ -455,54 +455,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188020404}
   m_CullTransparentMesh: 1
---- !u!1 &450625940
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 450625941}
-  - component: {fileID: 450625942}
-  m_Layer: 0
-  m_Name: MainManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &450625941
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450625940}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1474351, y: 2.223435, z: 1.3827579}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &450625942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450625940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d110623a642692246a42fbc2d8d89884, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BrickPrefab: {fileID: 897975713663390409, guid: 63f25b9733d2bcd4fa2ff6de1264c739, type: 3}
-  LineCount: 6
-  Ball: {fileID: 177912862}
-  ScoreText: {fileID: 188020406}
-  GameOverText: {fileID: 474497238}
 --- !u!1 &455529321
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +519,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &474497238
 GameObject:
@@ -581,12 +533,12 @@ GameObject:
   - component: {fileID: 474497241}
   - component: {fileID: 474497240}
   m_Layer: 5
-  m_Name: GameoverText
+  m_Name: GameOverText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &474497239
 RectTransform:
   m_ObjectHideFlags: 0
@@ -641,7 +593,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'GAME OVER
 
-    Press Space to Restart'
+    Press "R" to Restart
+
+    Press "Esc" to Return to Menu'
 --- !u!222 &474497241
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -969,7 +923,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee19acfba77e9084fb4ce7ee7ff9e3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Manager: {fileID: 450625942}
 --- !u!1 &1288645155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1251,7 @@ GameObject:
   - component: {fileID: 2078529057}
   - component: {fileID: 2078529056}
   m_Layer: 5
-  m_Name: ScoreText (1)
+  m_Name: BestScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1320,8 +1273,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 40}
+  m_AnchoredPosition: {x: 244.49, y: -80}
+  m_SizeDelta: {x: 600, y: 136.74}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2078529056
 MonoBehaviour:
@@ -1350,7 +1303,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1460,7 +1413,7 @@ RectTransform:
   - {fileID: 474497239}
   - {fileID: 2078529055}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
